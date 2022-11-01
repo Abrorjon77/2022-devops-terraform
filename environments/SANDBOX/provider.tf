@@ -9,7 +9,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "rady-bucket-1-0-0-0"
+    bucket = "abror-pipeline-s3-bucket"
     key    = "dags/myfile"
     region = "us-east-1"
   }
