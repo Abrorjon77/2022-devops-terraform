@@ -10,7 +10,7 @@ variable "public_subnet_1" {
 }
 
 variable "ssh_key_name" {
-    default = "radostinpaskalev_key"
+    default = "my-aaa-key"
 }
 
 variable "ebs_optimized" {
