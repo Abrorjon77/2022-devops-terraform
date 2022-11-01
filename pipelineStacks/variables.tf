@@ -1,5 +1,5 @@
 variable "GitHubOwner" {
-  default = "rpaskalev"
+  default = "Abrorjon77"
 }
 
 variable "GitHubRepo" {
