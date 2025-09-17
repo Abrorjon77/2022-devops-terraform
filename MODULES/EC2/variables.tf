@@ -10,7 +10,7 @@ variable "public_subnet_1" {
 }
 
 variable "ssh_key_name" {
-    default = "my-aaa-key"
+    default = "jenkins-key"
 }
 
 variable "ebs_optimized" {
