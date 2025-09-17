@@ -1,10 +1,11 @@
 locals {
   prefix = "ziyotek-${var.bucket_name}"
 }
-backend "s3" {
-    bucket = var.artifact_bucket
+terraform {
+  backend "s3" {
+    bucket = "mys3backendstate"
     key    = "state/terraform.tfstate"
-    region = var.region
+    region = "us-east-1"
   }
 }
 
