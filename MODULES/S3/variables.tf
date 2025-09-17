@@ -14,7 +14,7 @@ variable "versioning" {
   default     = false
 }
 
-variable "create_s3" {
-  default = false
-  type = bool
-}
+#variable "create_s3" {
+  #default = false
+  #type = bool
+#}
