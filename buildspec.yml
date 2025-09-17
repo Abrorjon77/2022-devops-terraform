@@ -13,7 +13,7 @@ phases:
       - unzip -o terraform.zip
   build:
     commands:
-      - cd $CODEBUILD_SRC_DIR/environments/SANDBOX
+      - cd /environments/SANDBOX
       - terraform init -input=false
       - terraform plan -input=false
       - terraform destroy -auto-approve
