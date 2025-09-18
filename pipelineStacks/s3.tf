@@ -1,9 +1,9 @@
-resource "aws_s3_bucket" "example" {
-  bucket = "mys3backendstate"
-  
+//resource "aws_s3_bucket" "example" {
+  //bucket = "mys3backendstate"
 
-  force_destroy = true
-}
+
+  //force_destroy = true
+ //}
 terraform {
   backend "s3" {
     bucket = "mys3backendstate"
