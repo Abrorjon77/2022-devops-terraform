@@ -9,7 +9,7 @@
   # acl argument removed due to deprecation
   //region = "us-east-1"
 //}
-mys3backendstate
+
   
 data "aws_s3_bucket" "artifact_bucket" {
   bucket = "mys3backendstate"  # Replace with your bucket name
