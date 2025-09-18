@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "example" {
-  bucket = "awspipelinetestabroorbucket"
+  bucket = "mys3backendstate"
   
 
   force_destroy = true
