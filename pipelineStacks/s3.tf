@@ -9,16 +9,10 @@
   # acl argument removed due to deprecation
   //region = "us-east-1"
 //}
-data "aws_s3_bucket" "existing" {
-  bucket = "mys3backendstate"
-}
-
-resource "aws_s3_bucket_object" "tfstate" {
-  bucket = data.aws_s3_bucket.existing.id
-  key    = "terraform.tfstate"
-  //source = "path/to/your/local/terraform.tfstate"
-}
-
+mys3backendstate
   
+data "aws_s3_bucket" "artifact_bucket" {
+  bucket = "mys3backendstate"  # Replace with your bucket name
+}
 
 #add your state file s3 bucket code here
