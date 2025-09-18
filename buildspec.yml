@@ -13,7 +13,7 @@ phases:
       - unzip -o terraform.zip
   build:
     commands:
-      - cd /Users/jon/Desktop/2022-devops-terraform/environments/PRODUCTION
+      - cd environments/PRODUCTION
       - terraform init -input=false
       - terraform plan -input=false
       - terraform destroy -auto-approve
