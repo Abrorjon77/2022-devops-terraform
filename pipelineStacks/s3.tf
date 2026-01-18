@@ -12,7 +12,7 @@
 
   
 data "aws_s3_bucket" "artifact_bucket" {
-  bucket = "mys3backendstate"  # Replace with your bucket name
+  bucket = "abrorjoncodepipelines3bucket"  # Replace with your bucket name
 }
 
 #add your state file s3 bucket code here
