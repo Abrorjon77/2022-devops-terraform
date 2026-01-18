@@ -72,13 +72,13 @@ resource "aws_codepipeline" "codepipeline" {
   role_arn = aws_iam_role.codepipeline_role.arn
 
   //artifact_store {
-    //location = aws_s3_bucket.example.id
-    //type     = "S3"
+  //location = aws_s3_bucket.example.id
+  //type     = "S3"
   //}
   artifact_store {
-  location = data.aws_s3_bucket.artifact_bucket.bucket
-  type     = "S3"
-}
+    location = data.aws_s3_bucket.artifact_bucket.bucket
+    type     = "S3"
+  }
 
 
   stage {
