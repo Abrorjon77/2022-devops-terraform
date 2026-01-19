@@ -119,6 +119,6 @@ resource "aws_codebuild_project" "example" {
 
   source {
     type     = "CODEPIPELINE"
-    location = "buildspec.yml"
+    buildspec = file("buildspec.yml")
   }
 }
