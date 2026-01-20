@@ -56,7 +56,7 @@ resource "aws_codedeploy_deployment_group" "example" {
   ec2_tag_filter {
     key   = "Name"
     type  = "KEY_AND_VALUE"
-    value = "SamplleApp"
+    value = "SampleApp"
   }
 }
 
