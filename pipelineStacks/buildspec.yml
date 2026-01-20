@@ -15,7 +15,7 @@ phases:
     commands:
       - pwd
       - ls -la
-      - cd environments/SANDBOX
+      - cd ../environments/SANDBOX
       - terraform init -input=false
       - terraform plan -input=false
       - terraform apply -auto-approve
