@@ -13,7 +13,7 @@ phases:
       - unzip -o terraform.zip
   build:
     commands:
-      - cd ../environments/SANDBOX
+      - cd $CODEBUILD_SOURCE_DIR/environments/SANDBOX
       - terraform init -input=false
       - terraform plan -input=false
       - terraform apply -auto-approve
@@ -22,7 +22,6 @@ phases:
       - echo "terraform apply completed on `date`"
 artifacts:
   files:
-   - '**/*'
-  #base-directory: base_location
+    - '**/*'
   name: build_output
 
