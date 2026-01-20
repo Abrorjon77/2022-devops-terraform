@@ -13,12 +13,8 @@ phases:
       - unzip -o terraform.zip
   build:
     commands:
-      - pwd
-      - ls -la
-      - cd ../environments/SANDBOX
-      - terraform init -input=false
-      - terraform plan -input=false
-      - terraform apply -auto-approve
+      - pwd && ls -la
+      - cd ../environments/SANDBOX && terraform init -input=false && terraform plan -input=false && terraform apply -auto-approve
   post_build:
     commands:
       - echo "terraform apply completed on `date`"
