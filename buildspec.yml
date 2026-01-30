@@ -17,13 +17,12 @@ phases:
 
   build:
     commands:
-      - echo "Running Terraform"
-      - pwd
-      - ls -la
-      - cd environments/PRODUCTION
-      - terraform init
-      - terraform apply -auto-approve
-
+    - echo "Where am I?"
+    - pwd
+    - echo "Repo contents:"
+    - ls -la
+    - echo "Environments contents:"
+    - ls -la environments
   post_build:
     commands:
       - echo "Terraform apply completed on $(date)"
