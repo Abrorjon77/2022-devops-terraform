@@ -17,12 +17,14 @@ phases:
 
   build:
     commands:
-    - echo "Where am I?"
-    - pwd
-    - echo "Repo contents:"
-    - ls -la
-    - echo "Environments contents:"
-    - ls -la environments
+     - echo "Entering SANDBOX environment"
+      - pwd
+      - ls -la
+      - cd 2022-devops-terraform/environments/SANDBOX
+      - terraform init
+      - terraform validate
+      - terraform plan
+      - terraform apply -auto-approve
   post_build:
     commands:
       - echo "Terraform apply completed on $(date)"
