@@ -1,26 +1,32 @@
 version: 0.2
+
 env:
   variables:
     TF_VERSION: "0.12.29"
+
 phases:
   install:
     runtime-versions:
       python: 3.7
     commands:
-      - echo Downloading Terraform
-      - cd /usr/bin
+      - echo "Installing Terraform"
       - curl -s -qL -o terraform.zip https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_${TF_VERSION}_linux_amd64.zip
-      - unzip -o terraform.zip
+      - unzip terraform.zip
+      - mv terraform /usr/local/bin/
+      - terraform --version
+
   build:
     commands:
-      - echo "Current directory:" && pwd
-      - echo "Contents of current directory:" && ls -la
-      - echo "Checking parent directory:" && cd .. && pwd && ls -la
+      - echo "Running Terraform"
+      - pwd
+      - ls -la
+      - terraform init
+      - terraform apply -auto-approve
+
   post_build:
     commands:
-      - echo "terraform apply completed on `date`"
+      - echo "Terraform apply completed on $(date)"
+
 artifacts:
   files:
     - '**/*'
-  name: build_output
-
