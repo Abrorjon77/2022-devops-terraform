@@ -20,7 +20,7 @@ phases:
       - echo "Running Terraform"
       - pwd
       - ls -la
-      - cd environments/SANDBOX
+      - cd environments/PRODUCTION
       - terraform init
       - terraform apply -auto-approve
 
