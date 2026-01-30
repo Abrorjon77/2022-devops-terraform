@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    TF_VERSION: "0.12.29"
+    TF_VERSION: "1.5.7"
 
 phases:
   install:
@@ -17,14 +17,15 @@ phases:
 
   build:
     commands:
-     - echo "Entering SANDBOX environment"
+      - echo "Entering SANDBOX environment"
       - pwd
       - ls -la
-      - cd 2022-devops-terraform/environments/SANDBOX
+      - cd environments/SANDBOX
       - terraform init
       - terraform validate
       - terraform plan
       - terraform apply -auto-approve
+
   post_build:
     commands:
       - echo "Terraform apply completed on $(date)"
