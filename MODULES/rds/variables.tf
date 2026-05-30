@@ -31,6 +31,6 @@ variable "security_group" {
   }
 
 variable "rds_subnets" {
-      default = ""
+      default = []
  
 }

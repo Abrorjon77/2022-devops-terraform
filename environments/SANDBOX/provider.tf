@@ -9,7 +9,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "abrorjoncodepipelines3bucket"
+    bucket = "YOUR_TERRAFORM_STATE_BUCKET"  # TODO: replace with your S3 bucket name
     key    = "dags/myfile"
     region = "us-east-1"
   }
